@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --lg_title: 700 1.5rem/150% 'Montserrat', sans-serif;
+  --sm_title: 700 1.125rem/150% 'Montserrat', sans-serif;
+
+  --lg_subtitle: 600 1rem/150% 'Montserrat', sans-serif;
+  --sm_subtitle: 600 0.875rem/150% 'Montserrat', sans-serif;
+
+  --lg_paragraph: 400 0.875rem/150% 'Montserrat', sans-serif;
+  --sm_paragraph: 400 0.75rem/150% 'Montserrat', sans-serif;
+
+  --lg_button: 600 0.875rem/150% 'Montserrat', sans-serif;
+  --sm_button: 600 0.75rem/150% 'Montserrat', sans-serif;
+}
