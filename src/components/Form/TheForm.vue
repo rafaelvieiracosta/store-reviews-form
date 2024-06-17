@@ -5,6 +5,10 @@
       <FormQuestionDescription>
         Por favor, selecione um emoji e compartilhe seus pensamentos conosco abaixo.
       </FormQuestionDescription>
+
+      <Transition mode="out-in">
+        <component :is="is" />
+      </Transition>
     </FormQuestion>
 
     <FormQuestion>
@@ -28,4 +32,36 @@ import FormQuestionTitle from './FormQuestionTitle.vue'
 import FormQuestionDescription from './FormQuestionDescription.vue'
 import FormTextarea from './FormTextarea.vue'
 import FormButton from './FormButton.vue'
+
+import FormRatingRow from './FormRatingRow.vue'
+import FormRatingList from './FormRatingList.vue'
+
+import { computed } from 'vue'
+import { useSettingStore } from '@/stores/settings'
+
+const store = useSettingStore()
+
+const activedType = computed(() => {
+  return store.defType
+})
+const is = computed(() => {
+  const types = {
+    list: FormRatingList,
+    row: FormRatingRow
+  }
+
+  return types[activedType.value]
+})
 </script>
+
+<style>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
