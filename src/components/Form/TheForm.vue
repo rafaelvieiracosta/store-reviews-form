@@ -35,6 +35,7 @@ import FormButton from './FormButton.vue'
 
 import FormRatingRow from './FormRatingRow.vue'
 import FormRatingList from './FormRatingList.vue'
+import FormRatingRange from './FormRatingRange.vue'
 
 import { computed } from 'vue'
 import { useSettingStore } from '@/stores/settings'
@@ -47,7 +48,8 @@ const activedType = computed(() => {
 const is = computed(() => {
   const types = {
     list: FormRatingList,
-    row: FormRatingRow
+    row: FormRatingRow,
+    range: FormRatingRange
   }
 
   return types[activedType.value]
