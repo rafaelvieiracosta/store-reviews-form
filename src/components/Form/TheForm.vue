@@ -6,7 +6,7 @@
         Por favor, selecione um emoji e compartilhe seus pensamentos conosco abaixo.
       </FormQuestionDescription>
 
-      <Transition mode="out-in">
+      <Transition name="fast-fade" mode="out-in">
         <component :is="is" />
       </Transition>
     </FormQuestion>
@@ -55,15 +55,3 @@ const is = computed(() => {
   return types[activedType.value]
 })
 </script>
-
-<style>
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

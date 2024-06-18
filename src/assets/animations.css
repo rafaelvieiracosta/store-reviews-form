@@ -1,0 +1,8 @@
+.fast-fade-enter-active,
+.fast-fade-leave-active {
+  transition: opacity 200ms ease;
+}
+.fast-fade-enter-from,
+.fast-fade-leave-to {
+  opacity: 0;
+}
