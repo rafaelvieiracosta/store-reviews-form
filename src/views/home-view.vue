@@ -1,16 +1,16 @@
 <script setup>
-import TheSettings from '../components/TheSettings/TheSettings.vue'
-import TheForm from '../components/Form/TheForm.vue'
+import TheSettings from '../components/the-settings/the-settings.vue'
+import TheForm from '../components/the-form/the-form.vue'
 </script>
 
 <template>
   <main>
     <div class="grid">
-      <TheSettings />
+      <the-settings />
 
       <div>
         <h1>Avaliação da loja</h1>
-        <TheForm />
+        <the-form />
       </div>
     </div>
   </main>

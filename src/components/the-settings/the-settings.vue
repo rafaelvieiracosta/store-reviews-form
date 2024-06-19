@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="teste">
     <div class="settings">
       <p class="settings__list-title">theme</p>
       <div class="settings__list-options column">
@@ -113,8 +113,8 @@
 
         <button
           class="settings__option"
-          :class="{ actived: activedType === 'ranger' }"
-          @click="setType('ranger')"
+          :class="{ actived: activedType === 'range' }"
+          @click="setType('range')"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="8" fill="none">
             <path
@@ -195,6 +195,9 @@ function setTheme(newOption) {
 </script>
 
 <style scoped>
+.teste {
+  margin-top: 60px;
+}
 .settings + .settings {
   margin-top: 16px;
 }
