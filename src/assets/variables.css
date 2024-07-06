@@ -1,6 +1,13 @@
 :root {
   --background_linear: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
 
+  --lg_divider_space: 24px;
+  --sm_divider_space: 16px;
+
+  --bases-neutral: #ffffff;
+  --bases-component: #9747ff;
+}
+:root.modern-elegance {
   --highlight_color: #34495e;
   --background_color: #f2f2f2;
   --text_color: #ffffff;
@@ -10,10 +17,52 @@
   --border_active: #34495e40;
   --shadow: 0px 0px 0px 3px #34495e10;
   --shadow_active: 0px 0px 0px 12px #34495e10;
+}
+:root.spring-freschness {
+  --highlight_color: #6ab04c; /* Verde claro */
+  --background_color: #eafaf1; /* Fundo verde pálido */
+  --text_color: #2d3436; /* Cinza escuro */
+  --button_color: #fdcb6e; /* Amarelo suave */
+  --button_color_hover: #e1a32b; /* Amarelo mais forte */
+  --button_text_color: #ffffff; /* Texto do botão branco */
+  --border: #6ab04c30; /* Verde claro translúcido */
+  --border_active: #6ab04c60; /* Verde claro mais opaco */
+  --shadow: 0px 0px 0px 3px #6ab04c30; /* Sombra verde claro */
+  --shadow_active: 0px 0px 0px 12px #6ab04c30; /* Sombra verde claro mais intensa */
+}
+:root.cozy-vibes {
+  --highlight_color: #c39a6b; /* Marrom claro */
+  --background_color: #fdf6e3; /* Fundo bege claro */
+  --text_color: #ffffff; /* Marrom escuro */
+  --button_color: #a1887f; /* Marrom médio */
+  --button_color_hover: #8d6e63; /* Marrom mais escuro */
+  --button_text_color: #ffffff; /* Texto do botão branco */
+  --border: #c39a6b30; /* Marrom claro translúcido */
+  --border_active: #c39a6b60; /* Marrom claro mais opaco */
+  --shadow: 0px 0px 0px 3px #c39a6b30; /* Sombra marrom claro */
+  --shadow_active: 0px 0px 0px 12px #c39a6b30; /* Sombra marrom claro mais intensa */
+}
 
-  --lg_divider_space: 24px;
-  --sm_divider_space: 16px;
-
-  --bases-neutral: #ffffff;
-  --bases-component: #9747ff;
+:root.minimalist-sophistication {
+  --highlight_color: #2c3e50;
+  --background_color: #ecf0f1;
+  --text_color: #2c3e50;
+  --button_color: #bdc3c7;
+  --button_color_hover: #95a5a6;
+  --border: #2c3e5030;
+  --border_active: #2c3e5060;
+  --shadow: 0px 0px 0px 3px #2c3e5010;
+  --shadow_active: 0px 0px 0px 12px #2c3e5010;
+}
+:root.vibrant-energy {
+  --highlight_color: #e84393; /* Coral vivo */
+  --background_color: #e8439310; /* Fundo amarelo suave */
+  --text_color: #ffffff; /* Vermelho escuro */
+  --button_color: #fd79a8; /* Rosa vibrante */
+  --button_color_hover: #ca6086; /* Rosa mais escuro */
+  --button_text_color: #ffffff; /* Texto do botão branco */
+  --border: #fd79a830; /* Rosa vibrante translúcido */
+  --border_active: #fd79a860; /* Rosa vibrante mais opaco */
+  --shadow: 0px 0px 0px 3px #ff767530; /* Sombra coral vivo */
+  --shadow_active: 0px 0px 0px 12px #ff767530; /* Sombra coral vivo mais intensa */
 }

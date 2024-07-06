@@ -21,7 +21,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { useSettingStore } from '@/stores/settings'
+
+const store = useSettingStore()
 
 const inputModel = ref(50)
 const range = ref(null)
@@ -61,6 +64,13 @@ const feedbacks = [
 const getData = computed(() => {
   const range = inputModel.value
   return feedbacks.find((feedback) => range >= feedback.min && range <= feedback.max)
+})
+const activedTheme = computed(() => {
+  return store.defTheme
+})
+
+watch(activedTheme, () => {
+  updateRangeBackground()
 })
 
 const updateRangeBackground = () => {

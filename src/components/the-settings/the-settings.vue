@@ -5,8 +5,8 @@
       <div class="settings__list-options column">
         <button
           class="settings__option"
-          :class="{ actived: activedTheme === 'mordern-elegance' }"
-          @click="setTheme('mordern-elegance')"
+          :class="{ actived: activedTheme === 'modern-elegance' }"
+          @click="setTheme('modern-elegance')"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
             <rect width="14" height="14" fill="#34495E" rx="2" />
@@ -21,7 +21,7 @@
           @click="setTheme('spring-freschness')"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
-            <rect width="14" height="14" fill="#00796B" rx="2" />
+            <rect width="14" height="14" fill="#6ab04c" rx="2" />
           </svg>
 
           spring-freschness
@@ -33,7 +33,7 @@
           @click="setTheme('cozy-vibes')"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
-            <rect width="14" height="14" fill="#FFB74D" rx="2" />
+            <rect width="14" height="14" fill="#c39a6b" rx="2" />
           </svg>
 
           cozy-vibes
@@ -45,7 +45,7 @@
           @click="setTheme('minimalist-sophistication')"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
-            <rect width="14" height="14" fill="#757575" rx="2" />
+            <rect width="14" height="14" fill="#95a5a6" rx="2" />
           </svg>
 
           minimalist-sophistication
@@ -57,7 +57,7 @@
           @click="setTheme('vibrant-energy')"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
-            <rect width="14" height="14" fill="#E53935" rx="2" />
+            <rect width="14" height="14" fill="#e84393" rx="2" />
           </svg>
 
           vibrant-energy
@@ -191,6 +191,9 @@ const activedTheme = computed(() => {
 })
 function setTheme(newOption) {
   store.defTheme = newOption
+
+  const element = document.documentElement
+  element.className = newOption
 }
 </script>
 
@@ -204,8 +207,8 @@ function setTheme(newOption) {
 .settings__list-title {
   font-size: 8px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #f2f2f2;
-  color: #34495e;
+  border-bottom: 1px solid var(--background_color);
+  color: var(--highlight_color);
 }
 .settings__list-options {
   margin-top: 7px;
@@ -221,8 +224,8 @@ function setTheme(newOption) {
   justify-content: center;
   align-items: center;
   min-height: 30px;
-  background-color: #ffffff;
-  border: 1px solid #34495e20;
+  background-color: transparent;
+  border: 1px solid var(--border);
   padding: 0 15px;
   border-radius: 6px;
   transition:
@@ -230,14 +233,14 @@ function setTheme(newOption) {
     background-color 500ms;
   cursor: pointer;
   font-size: 10px;
-  color: #34495e;
+  color: var(--highlight_color);
 }
 .settings__option:hover {
-  box-shadow: 0 0 0 3px #34495e10;
+  box-shadow: 0 0 0 3px var(--border);
 }
 .settings__option.actived {
-  background-color: #f2f2f2;
-  border-color: #34495e40;
+  background-color: var(--background_color);
+  border-color: var(--border_active);
 }
 .column .settings__option {
   gap: 8px;
